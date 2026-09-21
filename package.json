@@ -1,0 +1,32 @@
+{
+  "name": "yamr",
+  "version": "0.1.0",
+  "description": "Yet Another Markdown Renderer: a small local server that renders markdown in your browser with live reload.",
+  "type": "module",
+  "bin": {
+    "yamr": "bin/yamr.js"
+  },
+  "main": "src/server.js",
+  "files": [
+    "bin",
+    "src"
+  ],
+  "scripts": {
+    "start": "node bin/yamr.js",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "markdown",
+    "preview",
+    "live-reload",
+    "cli"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "marked": "^18.0.13",
+    "morphdom": "^2.7.8"
+  }
+}
