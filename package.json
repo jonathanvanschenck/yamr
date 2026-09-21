@@ -36,5 +36,13 @@
   "author": "Jonathan Van Schenck <jvschenck@novadynamics.com>",
   "publishConfig": {
     "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jonathanvanschenck/yamr.git"
+  },
+  "homepage": "https://github.com/jonathanvanschenck/yamr#readme",
+  "bugs": {
+    "url": "https://github.com/jonathanvanschenck/yamr/issues"
   }
 }
