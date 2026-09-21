@@ -41,6 +41,8 @@ The server watches the parent directory of each open file. When the file changes
 
 If the file does not exist yet, the page waits and renders it when it appears.
 
+Fenced code blocks are highlighted on the server with `highlight.js` (the common language set). The theme follows the system light or dark mode.
+
 ## Development
 
 ```sh

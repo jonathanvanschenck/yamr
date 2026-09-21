@@ -1,4 +1,6 @@
 import { Marked } from 'marked';
+import { markedHighlight } from 'marked-highlight';
+import hljs from 'highlight.js/lib/common';
 import { createHash } from 'node:crypto';
 
 const MARKDOWN_EXTENSIONS = new Set(['.md', '.markdown', '.mdown', '.mkd', '.mkdn']);
@@ -21,6 +23,13 @@ export function slugify(text) {
 
 function createMarked() {
   const marked = new Marked({ gfm: true, breaks: false });
+  marked.use(markedHighlight({
+    langPrefix: 'hljs language-',
+    highlight(code, lang) {
+      const language = hljs.getLanguage(lang) ? lang : 'plaintext';
+      return hljs.highlight(code, { language }).value;
+    },
+  }));
   let seen;
   marked.use({
     hooks: {

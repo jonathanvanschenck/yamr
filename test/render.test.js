@@ -29,3 +29,12 @@ test('markdown extensions are detected', () => {
   assert.ok(!isMarkdownPath('/a/b.txt'));
   assert.ok(!isMarkdownPath('/a/README'));
 });
+
+test('fenced code is syntax highlighted', () => {
+  const { html } = renderMarkdown('```js\nconst x = 1;\n```\n');
+  assert.match(html, /<code class="hljs language-js">/);
+  assert.match(html, /<span class="hljs-keyword">const<\/span>/);
+  const plain = renderMarkdown('```nosuchlang\n<b>\n```\n').html;
+  assert.match(plain, /class="hljs language-nosuchlang"/);
+  assert.match(plain, /&lt;b&gt;/);
+});

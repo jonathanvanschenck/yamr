@@ -14,6 +14,8 @@ const ASSETS = {
   '/__yamr/client.js': { file: path.join(HERE, 'client.js'), type: 'text/javascript' },
   '/__yamr/style.css': { file: path.join(HERE, 'style.css'), type: 'text/css' },
   '/__yamr/morphdom.js': { file: require.resolve('morphdom/dist/morphdom-umd.min.js'), type: 'text/javascript' },
+  '/__yamr/hljs-light.css': { file: require.resolve('highlight.js/styles/github.min.css'), type: 'text/css' },
+  '/__yamr/hljs-dark.css': { file: require.resolve('highlight.js/styles/github-dark.min.css'), type: 'text/css' },
 };
 
 const MIME = {
@@ -59,6 +61,8 @@ function page({ title, filePath, html, hash, live }) {
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${escapeHtml(title)}</title>
 <link rel="stylesheet" href="/__yamr/style.css">
+<link rel="stylesheet" href="/__yamr/hljs-light.css" media="(prefers-color-scheme: light)">
+<link rel="stylesheet" href="/__yamr/hljs-dark.css" media="(prefers-color-scheme: dark)">
 </head>
 <body data-path="${escapeHtml(live ? filePath : '')}">
 <main id="content" class="markdown" data-hash="${hash}">
