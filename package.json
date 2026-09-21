@@ -9,7 +9,9 @@
   "main": "src/server.js",
   "files": [
     "bin",
-    "src"
+    "src",
+    "LICENSE",
+    "README.md"
   ],
   "scripts": {
     "start": "node bin/yamr.js",
@@ -30,5 +32,6 @@
     "marked": "^18.0.13",
     "marked-highlight": "^2.2.4",
     "morphdom": "^2.7.8"
-  }
+  },
+  "author": "Jonathan Van Schenck <jvschenck@novadynamics.com>"
 }

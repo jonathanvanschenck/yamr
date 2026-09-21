@@ -52,3 +52,7 @@ npm test
 ## Notes
 
 The server binds to localhost only, and it serves any file the user can read. Do not bind it to a public address.
+
+## License
+
+MIT. See `LICENSE`.
