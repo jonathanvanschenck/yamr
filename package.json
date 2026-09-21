@@ -1,5 +1,5 @@
 {
-  "name": "yamr",
+  "name": "@jonathanvanschenck/yamr",
   "version": "0.1.0",
   "description": "Yet Another Markdown Renderer: a small local server that renders markdown in your browser with live reload.",
   "type": "module",
@@ -33,5 +33,8 @@
     "marked-highlight": "^2.2.4",
     "morphdom": "^2.7.8"
   },
-  "author": "Jonathan Van Schenck <jvschenck@novadynamics.com>"
+  "author": "Jonathan Van Schenck <jvschenck@novadynamics.com>",
+  "publishConfig": {
+    "access": "public"
+  }
 }

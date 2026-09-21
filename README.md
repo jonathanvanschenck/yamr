@@ -4,18 +4,19 @@ Yet Another Markdown Renderer. A small local server that shows a markdown file i
 
 ## Install
 
-Run it from a clone of this repository:
+Run it once without installing:
 
 ```sh
-npm install
-npm link
+npx @jonathanvanschenck/yamr FILE.md
 ```
 
-After `npm link`, the `yamr` command is on your PATH. Or run it without linking:
+Or install it globally so the `yamr` command is on your PATH:
 
 ```sh
-node bin/yamr.js FILE.md
+npm install -g @jonathanvanschenck/yamr
 ```
+
+To run from a clone of this repository, use `npm install` and then `node bin/yamr.js FILE.md`, or `npm link` to put `yamr` on your PATH.
 
 ## Use
 
