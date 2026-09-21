@@ -1,6 +1,6 @@
 {
   "name": "@jonathanvanschenck/yamr",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Yet Another Markdown Renderer: a small local server that renders markdown in your browser with live reload.",
   "type": "module",
   "bin": {
